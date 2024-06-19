@@ -6,6 +6,7 @@
 
 import re
 from typing import Any, Dict, List
+from urllib.request import urlretrieve
 
 from rocm_docs import ROCmDocs
 
@@ -47,8 +48,7 @@ suppress_warnings = ["etoc.toctree"]
 
 numfig = False
 
-
 exclude_patterns = [
     "doxygen/mainpage.md",
-    "understand/glossary.md"
+    "understand/glossary.md",
 ]
