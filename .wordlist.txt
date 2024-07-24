@@ -85,6 +85,7 @@ Nsight
 overindex
 overindexing
 oversubscription
+pixelated
 pragmas
 preconditioners
 prefetched
