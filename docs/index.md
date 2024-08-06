@@ -32,6 +32,7 @@ On non-AMD platforms, like NVIDIA, HIP provides header files required to support
 * {doc}`./understand/programming_model`
 * {doc}`./understand/hardware_implementation`
 * {doc}`./understand/amd_clr`
+* {doc}`./understand/driver_api`
 
 :::
 
@@ -56,6 +57,7 @@ On non-AMD platforms, like NVIDIA, HIP provides header files required to support
 * {doc}`/doxygen/html/index`
 * [C++ language extensions](./reference/cpp_language_extensions)
 * [C++ language support](./reference/cpp_language_support)
+* [Driver API](./reference/driver_api_reference)
 * [HIP math API](./reference/math_api)
 * [Comparing syntax for different APIs](./reference/terms)
 * [HSA runtime API for ROCm](./reference/virtual_rocr)

@@ -18,6 +18,7 @@ subtrees:
   - file: understand/programming_model
   - file: understand/hardware_implementation
   - file: understand/amd_clr
+  - file: understand/driver_api
 
 - caption: How to
   entries:
@@ -42,6 +43,7 @@ subtrees:
     title: C++ language extensions
   - file: reference/cpp_language_support
     title: C++ language support
+  - file: reference/driver_api_reference
   - file: reference/math_api
   - file: reference/terms
     title: Comparing syntax for different APIs
