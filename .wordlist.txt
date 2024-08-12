@@ -46,12 +46,14 @@ HIP's
 hipcc
 hipexamine
 hipified
+HIPify
 hipother
 HIPRTC
 hcBLAS
 icc
 IILE
 iGPU
+inlined
 inplace
 Interoperation
 interoperate
@@ -72,6 +74,7 @@ ltrace
 makefile
 Malloc
 malloc
+MALU
 multicore
 multigrid
 multithreading
@@ -82,6 +85,7 @@ nonnegative
 NOP
 Numa
 Nsight
+omnitrace
 overindex
 overindexing
 oversubscription
@@ -89,12 +93,14 @@ pragmas
 preconditioners
 prefetched
 preprocessor
+profilers
 PTX
 PyHIP
 queryable
 prefetching
 representable
 RMW
+rocgdb
 ROCm's
 rocTX
 RTC
