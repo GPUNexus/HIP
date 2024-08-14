@@ -18,7 +18,7 @@ conda:
 build:
    os: ubuntu-22.04
    tools:
-      python: "mambaforge-24.3"
+      python: "mambaforge-23.11"
    apt_packages:
      - "doxygen"
      - "gfortran" # For pre-processing fortran sources
