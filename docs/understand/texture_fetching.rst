@@ -50,7 +50,9 @@ This image is the example texture stretched out to a 4x4 pixel quad, but still i
 Linear filtering
 -------------------------------------------------------------------------------
 
-The linear filtering method simply does a linear interpolation between values.
+The linear filtering method simply does a linear interpolation between values. Linear interpolation is used to create a linear transition between two values. The formula used is ``(1-t)P1 + tP2`` where ``P1`` and ``P2`` are the values and ``t`` is within the [0..1] range.
+
+In the case of texture sampling the following formulas are used:
 
 * For one dimensional textures it is ``tex(x) = (1-α)T[i] + αT[i+1]``
 * For two dimensional textures it is ``tex(x,y) = (1-α)(1-β)T[i,j] + α(1-β)T[i+1,j] + (1-α)βT[i,j+1] + αβT[i+1,j+1]``
