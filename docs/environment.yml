@@ -4,4 +4,7 @@ channels:
   - defaults
 dependencies:
   - python=3.10
+  - pip
   - doxygen=1.9.8
+  - pip:
+    - -r ./sphinx/requirements.txt
