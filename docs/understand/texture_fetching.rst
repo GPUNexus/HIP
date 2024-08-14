@@ -87,7 +87,7 @@ This image is the example texture on a 4x4 pixel quad indexed in the [0..3] rang
   :alt: Texture with yellow border color
   :align: center
 
-  Texture with yellow border color
+  Texture with yellow border color. The purple lines are not part of the texture, only denote the edge, where the addressing begins. 
 
 .. _texture_fetching_wrap:
 Address mode wrap
@@ -106,7 +106,7 @@ This image is the example texture on a 4x4 pixel quad indexed in the [0..3] rang
   :alt: Texture with wrap addressing
   :align: center
 
-  Texture with wrap addressing
+  Texture with wrap addressing. The purple lines are not part of the texture, only denote the edge, where the addressing begins. 
 
 .. _texture_fetching_mirror:
 Address mode mirror
@@ -121,7 +121,7 @@ This image is the example texture on a 4x4 pixel quad indexed in the [0..3] rang
   :alt: Texture with mirror addressing
   :align: center
 
-  Texture with mirror addressing
+  Texture with mirror addressing. The purple lines are not part of the texture, only denote the edge, where the addressing begins. 
 
 .. _texture_fetching_clamp:
 Address mode clamp
@@ -136,4 +136,4 @@ This image is the example texture on a 4x4 pixel quad indexed in the [0..3] rang
   :alt: Texture with clamp addressing
   :align: center
 
-  Texture with clamp addressing
+  Texture with clamp addressing. The purple lines are not part of the texture, only denote the edge, where the addressing begins. 
