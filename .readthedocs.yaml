@@ -13,7 +13,7 @@ python:
    - requirements: docs/sphinx/requirements.txt
 
 conda:
-  environment: readthedocs_env.yaml
+   environment: docs/environment.yml
 
 build:
    os: ubuntu-22.04
