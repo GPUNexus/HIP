@@ -31,4 +31,3 @@ Driver Entry Point Access
 -------------------------
 
 .. doxygenfunction:: hipGetProcAddress
-   :content-only:

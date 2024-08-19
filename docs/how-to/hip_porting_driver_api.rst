@@ -125,8 +125,7 @@ Using ``hipModuleLaunchKernel``
 Additional Information
 ^^^^^^^^^^^^^^^^^^^^^^
 
-* HIP-Clang creates a primary context when the HIP API is called. So in a pure driver API code, HIP-Clang will create a primary context while HIP/NVCC will have an empty context stack.
-HIP-Clang will push primary context to context stack when it is empty. This can have subtle differences on applications which mix the runtime and driver APIs.
+HIP-Clang creates a primary context when the HIP API is called. So in a pure driver API code, HIP-Clang will create a primary context while HIP/NVCC will have an empty context stack. HIP-Clang will push primary context to context stack when it is empty. This can have subtle differences on applications which mix the runtime and driver APIs.
 
 ``hip-clang`` Implementation Notes
 ----------------------------------
