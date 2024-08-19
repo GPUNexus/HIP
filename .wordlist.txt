@@ -42,13 +42,14 @@ GPGPU
 GWS
 hardcoded
 HC
+hcBLAS
 HIP's
 hipcc
 hipexamine
 hipified
 hipother
 HIPRTC
-hcBLAS
+hypothetic
 icc
 IILE
 iGPU
@@ -111,6 +112,7 @@ SYCL
 syntaxes
 tradeoffs
 templated
+toolkits
 typedefs
 UMM
 unmap
