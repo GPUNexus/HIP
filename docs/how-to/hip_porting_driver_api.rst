@@ -100,7 +100,7 @@ The current context is implicitly used by other APIs such as ``hipStreamCreate``
 HIPIFY translation of CUDA Driver API
 -------------------------------------
 
-The HIPIFY tools convert CUDA Driver APIs for streams, events, modules, devices, memory management, context, profiler to the equivalent HIP driver calls. For example, ``cuEventCreate`` will be translated to ``hipEventCreate``.
+The HIPIFY tools convert CUDA Driver APIs for streams, events, modules, devices, memory management, context, profiler to the equivalent HIP calls. For example, ``cuEventCreate`` will be translated to ``hipEventCreate``.
 HIPIFY tools also convert error codes from the Driver namespace and coding convention to the equivalent HIP error code. Thus, HIP unifies the APIs for these common functions.
 
 The memory copy API requires additional explanation. The CUDA driver includes the memory direction in the name of the API (``cuMemcpyH2D``) while the CUDA driver API provides a single memory copy API with a parameter that specifies the direction and additionally supports a "default" direction where the runtime determines the direction automatically.
