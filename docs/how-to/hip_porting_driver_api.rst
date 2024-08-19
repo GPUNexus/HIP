@@ -125,7 +125,7 @@ Using ``hipModuleLaunchKernel``
 Additional Information
 ^^^^^^^^^^^^^^^^^^^^^^
 
-HIP-Clang creates a primary context when the HIP API is called. So in a pure driver API code, HIP-Clang will create a primary context while HIP/NVCC will have an empty context stack. HIP-Clang will push primary context to context stack when it is empty. This can have subtle differences on applications which mix the runtime and driver APIs.
+HIP-Clang creates a primary context when the HIP API is called. So in a pure driver API code, HIP-Clang will create a primary context while HIP/NVCC will have an empty context stack. HIP-Clang will push primary context to the context stack when it is empty. This can have subtle differences on applications which mix the runtime and driver APIs.
 
 ``hip-clang`` Implementation Notes
 ----------------------------------
@@ -324,7 +324,7 @@ The below sample shows how to use ``hipModuleGetFunction``.
 HIP Module and Texture Driver API
 =================================
 
-HIP supports texture driver APIs however texture reference should be declared in host scope. Following code explains the use of texture reference for ``__HIP_PLATFORM_AMD__`` platform.
+HIP supports texture driver APIs. However texture reference should be declared in host scope. Following code explains the use of texture reference for ``__HIP_PLATFORM_AMD__`` platform.
 
 .. code-block:: cpp
 
