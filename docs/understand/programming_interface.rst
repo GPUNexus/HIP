@@ -70,6 +70,22 @@ For example of compiling from command line, check the :ref:` SAXPY tutorial comp
 HIP runtime API
 ===============
 
+For the AMD ROCm platform, HIP provides headers and a runtime library built on
+top of HIP-Clang compiler in the repository
+:doc:`Common Language Runtime (CLR) <hip:understand/amd_clr>`. The HIP runtime
+implements HIP streams, events, and memory APIs, and is an object library that
+is linked with the application. The source code for all headers and the library
+implementation is available on GitHub.
+
+For the NVIDIA CUDA platform, HIP provides headers that translate from the
+HIP runtime API to the CUDA runtime API. The host-side contains mostly inlined
+wrappers or even just preprocessor defines, with no additional overhead.
+The device-side code is compiled with ``nvcc``, just like normal CUDA kernels,
+and therefore one can expect the same performance as if directly coding in CUDA.
+The CUDA specific headers can be found in the `hipother repository <https://github.com/ROCm/hipother>`_.
+
+For further details, check `HIP Runtime API Reference <doxygen/html/index.html>`_.
+
 .. _driver_api_understand:
 
 Driver API 
