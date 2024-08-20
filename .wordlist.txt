@@ -17,6 +17,7 @@ clr
 coroutines
 cuBLASLt
 cuCtx
+CUDA's
 cuDNN
 dataflow
 deallocate
@@ -52,6 +53,7 @@ hcBLAS
 icc
 IILE
 iGPU
+inlined
 inplace
 Interoperation
 interoperate

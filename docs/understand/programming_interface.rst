@@ -57,7 +57,7 @@ host. The HIP compilers:
 * Compiling the device code into an assembly.
 * Modify the host code by replacing the ``<<<...>>>`` syntax introduced in
   kernels by the necessary CUDA runtime function calls to load and launch each
-  compiled kernel from the PTX code and/or cubin object.
+  compiled kernel from the ``PTX`` code and/or ``cubin`` object.
 
 ``NVCC`` and ``amdclang++`` target different architectures and use different
 code object formats: ``NVCC`` is ``cubin`` or ``ptx`` files, while the
