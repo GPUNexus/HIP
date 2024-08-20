@@ -52,8 +52,6 @@ HIP compilation workflow
 The source code compiled with HIP compilers are separated to device code and
 host. The HIP compilers:
 
-.. WIP
-
 * Compiling the device code into an assembly.
 * Modify the host code by replacing the ``<<<...>>>`` syntax introduced in
   kernels by the necessary CUDA runtime function calls to load and launch each
