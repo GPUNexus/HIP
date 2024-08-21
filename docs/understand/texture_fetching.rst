@@ -105,7 +105,7 @@ The following image shows the texture on a 4x4 pixel quad, indexed in the [0 to 
 Address mode wrap
 -------------------------------------------------------------------------------
 
-In this addressing mode, the modulo of the index is calculated:
+In this addressing mode, the modulo of the index is calculated as:
 
 ``tex(x) = T[x mod (size-1)]``
 
