@@ -8,39 +8,21 @@
 Porting CUDA driver API 
 *******************************************************************************
 
-Introduction to the CUDA Driver and Runtime APIs
-================================================
-
-CUDA provides separate CUDA Driver and Runtime APIs. The two APIs have significant overlap in functionality:
+NVIDIA provides separate CUDA Driver and Runtime APIs. The two APIs have significant overlap in functionality:
 
 * Both APIs support events, streams, memory management, memory copy, and error handling.
 * Both APIs deliver similar performance.
-* Driver APIs calls begin with the prefix ``cu`` while Runtime APIs begin with the prefix ``cuda``. For example, the Driver API contains ``cuEventCreate`` while the Runtime API contains ``cudaEventCreate``, with similar functionality.
-* The Driver API defines a different, but largely overlapping, error code space than the Runtime API, and uses a different coding convention. For example, the Driver API defines ``CUDA_ERROR_INVALID_VALUE`` while the Runtime API defines ``cudaErrorInvalidValue``
+* Driver API calls begin with the prefix ``cu`` while Runtime API calls begin with the prefix ``cuda``. For example, the Driver API contains ``cuEventCreate`` while the Runtime API contains ``cudaEventCreate``, with similar functionality.
+* The Driver API defines a different, but largely overlapping, error code space than the Runtime API and uses a different coding convention. For example, the Driver API defines ``CUDA_ERROR_INVALID_VALUE`` while the Runtime API defines ``cudaErrorInvalidValue``.
 
-The Driver API offers two additional pieces of functionality not provided by the Runtime API: ``cuModule`` and ``cuCtx`` APIs.
-
-``<hip/hip_runtime_api.h>``
+The Driver API offers two additional functionalities not provided by the Runtime API: ``cuModule`` and ``cuCtx`` APIs.
 
 ``cuModule`` API
 ----------------
 
-The Module section of the Driver API provides additional control over how and when accelerator code objects are loaded.
-For example, the driver API allows code objects to be loaded from files or memory pointers.
-Symbols for kernels or global data can be extracted from the loaded code objects.
-In contrast, the Runtime API automatically loads and -- if necessary -- compiles all of the kernels from an executable binary when run.
-In this mode, NVCC must be used to compile kernel code so the automatic loading can function correctly.
+The Module section of the Driver API provides additional control over how and when accelerator code objects are loaded. For example, the driver API allows code objects to load from files or memory pointers. Symbols for kernels or global data are extracted from the loaded code objects. In contrast, the Runtime API loads automatically and compiles all the kernels from an executable binary when run, if necessary. In this mode, kernel code must be compiled using NVCC so that the automatic loading functions correctly.
 
-Both Driver and Runtime APIs define a function for launching kernels, called ``cuLaunchKernel`` or ``cudaLaunchKernel``.
-The kernel arguments and the execution configuration (grid dimensions, group dimensions, dynamic shared memory, and stream) are passed as arguments to the launch function.
-The Runtime additionally provides the ``<<< >>>`` syntax for launching kernels, which resembles a special function call and is easier to use than explicit launch API, in particular with respect to handling of kernel arguments.
-However, this syntax is not standard C++ and is available only when NVCC is used to compile the host code.
-
-The Module features are useful in an environment which generates the code objects directly, such as a new accelerator language front-end.
-Here, NVCC is not used. Instead, the environment may have a different kernel language or different compilation flow.
-Other environments have many kernels and do not want them to be all loaded automatically.
-The Module functions can be used to load the generated code objects and launch kernels.
-As we will see below, HIP defines a Module API which provides similar explicit control over code object management.
+The Module features are useful in an environment that generates the code objects directly, such as a new accelerator language front-end. Here, NVCC is not used. Instead, the environment might have a different kernel language or compilation flow. Other environments have many kernels and don't want all of them to be loaded automatically. The Module functions load the generated code objects and launch kernels. Similar to the cuModule API, HIP defines hipModule API that provides similar explicit control over code object management.
 
 ``cuCtx`` API
 -------------
@@ -120,7 +102,10 @@ Thus addresses may be shared between contexts, and unlike the original CUDA defi
 Using ``hipModuleLaunchKernel``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-``hipModuleLaunchKernel`` is ``cuLaunchKernel`` in HIP world. It takes the same arguments as ``cuLaunchKernel``.
+Both CUDA Driver and Runtime APIs define a function for launching kernels, called ``cuLaunchKernel`` or ``cudaLaunchKernel``. The equivalent API in HIP is ``hipModuleLaunchKernel``.
+The kernel arguments and the execution configuration (grid dimensions, group dimensions, dynamic shared memory, and stream) are passed as arguments to the launch function.
+The Runtime additionally provides the ``<<< >>>`` syntax for launching kernels, which resembles a special function call and is easier to use than explicit launch API, in particular with respect to handling of kernel arguments.
+However, this syntax is not standard C++ and is available only when NVCC is used to compile the host code.
 
 Additional Information
 ^^^^^^^^^^^^^^^^^^^^^^
