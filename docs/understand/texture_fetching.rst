@@ -23,7 +23,7 @@ Here is the sample texture used in this document for demonstration purposes. It 
 
 .. figure:: ../data/understand/textures/original.png
   :width: 150
-  :alt: Texture used as example
+  :alt: Sample texture
   :align: center
 
   Texture used as example
