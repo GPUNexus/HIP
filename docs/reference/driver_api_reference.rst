@@ -8,9 +8,9 @@
 Driver API reference
 *******************************************************************************
 
-On this page we present a list of driver API functions supported by HIP.
+This page presents a list of driver API functions supported by HIP.
 
-For comparison, compatibility and version information with the CUDA Driver API, please visit :doc:`hipify:index`.
+For comparison, compatibility, and version information with the CUDA Driver API, visit :doc:`hipify:index`.
 
 HIP driver API
 ==============

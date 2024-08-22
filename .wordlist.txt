@@ -1,3 +1,4 @@
+.hip_fatbin
 ALU
 ALUs
 AmgX
@@ -19,6 +20,7 @@ cuBLASLt
 cuCtx
 CUDA's
 cuDNN
+cuModule
 dataflow
 deallocate
 decompositions
@@ -44,13 +46,15 @@ GWS
 hardcoded
 HC
 hcBLAS
+HIP-Clang
 HIP's
 hipcc
 hipexamine
 hipified
+hipModule
+hipModuleLaunchKernel
 hipother
 HIPRTC
-hypothetic
 icc
 IILE
 iGPU
