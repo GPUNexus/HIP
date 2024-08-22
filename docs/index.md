@@ -30,7 +30,7 @@ On non-AMD platforms, like NVIDIA, HIP provides header files required to support
 :::{grid-item-card} Conceptual
 
 * {doc}`./understand/programming_model`
-* {doc}`./understand/programming_interface`
+* {doc}`./understand/hip_runtime_api`
 * {doc}`./understand/hardware_implementation`
 * {doc}`./understand/amd_clr`
 
