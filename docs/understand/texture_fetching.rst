@@ -7,7 +7,7 @@
 Texture fetching
 *******************************************************************************
 
-`Textures <../doxygen/html/group___texture.html>`_ are more than just a buffer interpreted as a 1D, 2D, or 3D array. 
+`Textures <../doxygen/html/group___texture.html>`_ are more than just a buffer interpreted as a 1D, 2D, or 3D array.
 
 As textures are associated with graphics, they are indexed using floating-point values. The index can be in the range of [0 to size-1] or in [0 to 1].
 
@@ -39,9 +39,9 @@ The various texture sampling methods are discussed in the following sections.
 Nearest point sampling
 -------------------------------------------------------------------------------
 
-In this method:
+In this method, the modulo of index is calculated as:
 
-``tex(x) = T[floor(x+0.5)]`` 
+``tex(x) = T[floor(x+0.5)]``
 
 This is also applicable for 2D and 3D variants.
 
@@ -99,7 +99,7 @@ The following image shows the texture on a 4x4 pixel quad, indexed in the [0 to 
   :alt: Texture with yellow border color
   :align: center
 
-  The purple lines are not part of the texture, only denote the edge, where the addressing begins.
+  The purple lines are not part of the texture. They only denote the edge, where the addressing begins.
 
 .. _texture_fetching_wrap:
 Address mode wrap
@@ -118,7 +118,7 @@ The following image shows the texture on a 4x4 pixel quad, indexed in the [0 to 
   :alt: Texture with wrap addressing
   :align: center
 
-  The purple lines are not part of the texture, only denote the edge, where the addressing begins.
+  The purple lines are not part of the texture. They only denote the edge, where the addressing begins.
 
 .. _texture_fetching_mirror:
 Address mode mirror
@@ -133,7 +133,7 @@ The following image shows the texture on a 4x4 pixel quad, indexed in the [0 to 
   :alt: Texture with mirror addressing
   :align: center
 
-  The purple lines are not part of the texture, only denote the edge, where the addressing begins.
+  The purple lines are not part of the texture. They only denote the edge, where the addressing begins.
 
 .. _texture_fetching_clamp:
 Address mode clamp
@@ -148,4 +148,4 @@ The following image shows the texture on a 4x4 pixel quad, indexed in the [0 to 
   :alt: Texture with clamp addressing
   :align: center
 
-  The purple lines are not part of the texture, only denote the edge, where the addressing begins.
+  The purple lines are not part of the texture. They only denote the edge, where the addressing begins.
